@@ -1,0 +1,186 @@
+<!DCOTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="JavaScript">
+	</head>
+	<body ng-app = "myApp">
+			<script src="angular.js"></script>
+		
+	
+	
+	
+	<p> My name is {{a}}</p>
+	
+	<!--	
+		<script>
+
+
+	//window.alert("Hello JS");
+	//console.log("Helo JS");
+	//document.getElementById("demo1").innerHTML = ("Hello JS..");
+	//var a = 10; var b = 20; var c = a + b;
+	//document.getElementById("demo1").innerHTML = (a == b);
+	
+		function f1(){
+			var a = 10;
+			var b = 20;
+			var sum = a + b;
+			return sum;
+		}
+		document.getElementById("demo1").innerHTML= f1();
+
+       //var camera = {model: "Cybershot", company: "Sony", price: 19000, type: "DSLR"};
+	  // document.getElementById("demo1").innerHTML = camera.company + " " + camera.model + " " + camera.price +" " + camera.type;
+
+
+
+	  var str = "There is no alternative for Hard Work.."
+	  var pos = str.lastIndexOf("r",20);
+	  document.getElementById("demo1").innerHTML = pos;
+	  
+	  </script>
+
+      <div>
+		Enter name: <input type="text" ng-model="name"/><br/>
+	   <p> Name is {{name}}</p>
+		</div>  -->
+		
+	
+	 
+	  
+
+          <!-- ///  Program to display slected images  
+			  <div ng-init=" ar = ['sony1.jpg','sony2.jpg','sony3.jpg']">
+			<table border="1" style="text-align: center;border-collapse: collapse">
+				<tr><th>Serial.no</th><th>Number</th><th>images</th></tr>
+				<tr ng-repeat="item in ar">
+					<td>{{$index + 1}}</td>
+					<td>{{item}}</td>
+					<td>
+						<img src="{{item}}" style="height: 150px; width: 150px;"/>
+					</td>
+				</tr>
+			</table>
+		
+		  </div>  -->
+
+
+		  <!--<div>
+			  Enter some text: <input type="text" ng-model="x" maxlength="10">
+			  <p>{{x}}</p>
+		  </div>  -->  
+
+
+		 <!-- <div ng-init="x = 'sony1.jpg'">
+
+			Select an image to display:
+			  <select ng-model="x">
+					<option>sony1.jpg</option>
+				  <option>sony2.jpg</option>
+				  <option>sony3.jpg</option>
+			  </select><br/><br/>
+			  <img src="{{x}}" />
+		  </div>  -->
+
+
+		  <!--<div ng-init="obj = {name: 'Govind', age:26, sex:'Male'}"></div>
+		  <p style="border: 2px solid red">
+			  Name: {{obj.name}}<br>
+			  Age: {{obj.age}}<br>
+			  Sex: {{obj.sex}}
+		  </p>
+			 </div> -->
+			 
+
+			 <!--   ///// Program to demonstrate controllers in AngularJS
+             <div ng-controller="myController">
+				Type some text: <input ng-model="name"><br>
+				<p>Welcome dear <span style="color: blue;font-size: 25px"> {{name}}</span></p>
+			</div>  -->
+
+			<!-- ///   Use of Array Of Ovjects In AngularJS
+			
+			<div ng-controller="myController">
+				<h3>
+					This table displays data using Array of Objects
+				</h3>
+				<table border="1px" style="border-color: red;width: 250px;text-align: center">
+					<tr>
+						<th>Name</th><th>Age</th><th>Mood</th>
+					</tr>
+					<tr ng-repeat="item in obj">
+						<td style="color: red">{{item.name}}</td>
+						<td style="color: green">{{item.age}}</td>
+						<td style="color:blue">{{item.mood}}</td>
+					</tr>
+				</table>
+			</div>  -->
+
+
+             
+		  
+	  
+		 
+
+		  <!--  ///  Program to demonstrate controllers in AngularJS
+		  <script>
+			  var app =angular.module("myApp",[]);
+			  app.controller("myController", function($scope)
+			  {
+				  $scope.name = "";
+			  });
+		  </script>  -->
+
+		  <!-- ///  Use of Array Of Ovjects In AngularJS
+		  <script>
+			  var app = angular.module("myApp",[]);
+			  app.controller("myController", function($scope)
+			  {
+				  $scope.obj = 
+				  [
+                     {name: 'Papa', age: 52, mood: 'light'},
+					 {name: 'Amma', age: 48, mood: 'good'},
+					 {name: 'Bhaiya', age: 33, mood: 'polite'},
+					 {name: 'Bhabhi', age: 33, mood: 'happy'}
+					 
+				  ]
+			  });    -->
+
+
+			 <!-- <div ng-controller="myController">
+				 Quantity:<br> 
+				 <input type="number"  ng-model="quantity"><br><br>
+				 Price: <br>
+				 <input type="number" ng-model="price"><br><br>
+                 <input type="button" ng-click="f1()" value="Total" >
+				 <p> Total price is: {{x}}</p>
+
+			  </div> -->
+			  
+			  
+			  
+		 <script>
+		  var app = angular.module("myApp",[]);
+		  app.controller("myController",function($scope)
+		  {
+                $scope.a = "Govind";
+				
+		  }
+		  
+		  
+		  );
+		  
+		  </script>
+
+   
+   
+   
+   
+   
+    
+	
+	
+
+</body>
+</html>

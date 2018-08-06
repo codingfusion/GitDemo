@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serious Testing</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Practise on Web">
+	<meta name="keywords" content="HTML,CSS,JAVASCRIPT and more">
+	<meta name="author" content="Govind">
+	<link rel="stylesheet" type="text/css" href="C:\Users\Mac\Desktop\web_tech\test.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+  <div class="div1">
+  	<h1>This is acting like a header for my site</h1>
+  </div><br><br>
+
+  <div class="div2"></div><br>
+  <div class="div3"></div><br>
+
+
+  <div class="plaindiv">
+  <div class="div2" style="margin-top: 10px;"></div><br>
+  <div class="div2">
+  	
+  </div><br>	
+
+  </div><br>
+
+<h2><del>This is deleted Text</del></h2>
+<h2><i>This text is Italic cum <sub>subscripted </sub>cum <sup> superscripted </sup> cum <mark>marked</mark> cum <small>small</small> cum <bold>bold</bold></i></h2>
+<p style="font-size: 20px;">This is a link to <a href="https://www.youtube.com" target="_blank">Youtube.com</a><br>
+
+
+
+<div style="float: right;">
+	<img src="D:\wallpaper\L36kcap.jpg" alt="dark_forest" style="width: 128px; height: 128px;">
+	<img src="D:\wallpaper\mountain-night-snow-dark-star-40-wallpaper-mod.jpg" style="width: 128px; height: 128px;">
+
+</div><hr>
+
+<div ng-app="">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+
+  <div  ng-init="quantity=6;cost=5">
+
+<p>Total in dollar: {{ quantity * cost }}</p>
+
+<div  ng-init="firstName='Govind';lastName='Bhagat'">
+
+<p>Name is {{ firstName + " " + lastName }}</p>
+
+</div>
+
+</div>
+</div>
+
+<select>
+	<option value="Ramakant Bhagat">Papa</option>
+	<option value="Gyanti Devi" selected>Amma</option>
+	<option value="Binod Kumar Bhagat">Bhaiya</option>
+	<option value="Kanak Kushwaha">Bhabhi</option>
+	<option value="Govind Bhagat">Me</option>
+</select><br><br>
+
+<div class="plaindiv">
+<form>
+Choose from list of Browsers<br>
+<input list="browsers">
+<datalist id="browsers">
+	<option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+</datalist>
+<input type="submit" value="submit">
+</form><br><br>
+
+
+
+<!--<video width="320" height="240" controls style="position: right">
+  <source src="F:\video_tutorials\CSS - The Complete Guide (incl. Flexbox, Grid & Sass)\01 Getting Started\001 Introduction.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br/>
+<br/>-->
+
+
+
+<form>
+	<fieldset style="width: 50%">
+		<legend>Information to be gathered</legend>
+	First name: <input type="text" name="fname" value=""><br/>
+	Last name: <input type="text" name="lname" value=""><br/><br/>
+	<input type="submit" value="submit">
+	</fieldset>
+</form><br><br>
+
+<form>
+
+	Select from list of Gender
+	<input type="radio" name="gender" value="male">
+	
+</form><br><br>
+
+
+
+<input type="date" name="bday">
+<input type="submit" value="submit"><br><br>
+
+
+<input type="color" name="mycolor">
+<input type="submit" value="submit">
+<br><br>
+
+
+
+<form>
+Enter email: <input type="email" name="email">
+<input type="submit" value="send">
+</form>
+</div><br><br>
+
+
+
+<table style="width: 50%; border: 1px solid #131313; padding: 15px;margin: auto;" cellspacing="10px">
+	<tr>
+		<th>Gyanti</th>
+		<th>Devi</th>
+		<th rowspan="3" style="background-color: lightgreen">Ramakant Bhagat</th>
+	</tr>
+
+	<tr>
+		<td colspan="2">Binod Kumar Bhagat</td>
+		
+		
+	</tr>
+
+	<tr>
+		<td>Bhabhi</td>
+		<td>Me</td>
+		
+	</tr>
+	
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

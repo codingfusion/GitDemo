@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript is base</title>
+        <style>
+        .d1{
+            background-color: lightcyan;
+            text-align: center;
+        }
+
+        .d2{
+            background-color: lightslategray;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="d1">
+        <h3 id="d1">Learning JavaScript</h3>
+        <h2 id="hide" style="display: none">This text was hidden before..</h2>
+        <input type="button" value="Click me to change" onclick="document.getElementById('d1').innerHTML='Hello JS'" />
+        <input type="button" value="Click me to hide" onclick="document.getElementById('d1').style.display='none'" />
+        <input type="button" value="Click me to reveal" onclick="document.getElementById('hide').style.display='block'" />
+        <p id=""></p> 
+    </div><br/><br/><br/>
+
+
+        <div class="d2">
+            <h3>We can change HTML state using JavaScript</h3>
+             <img id="onoff"src="images/off.jpg" width="150" height="100" alt="BulbOff" /><br/><br/>
+             <input type="button" value = "Turn on light"onclick="document.getElementById('onoff').src = 'images/on.jpg'"/>
+             <input type="button" value = "Turn off light"onclick="document.getElementById('onoff').src = 'images/off.jpg'"/>
+        </div>
+
+
+        <div class="d1">
+             <p id="df1">This is a demo of function in JavaScript..This text will change in a moment</p>
+             <input type="button" value="Click me" onclick="f1()"/>
+        </div><br/>
+
+        <p id="bln"></p>
+
+        <script>
+
+          function f1(){
+              document.getElementById("df1").innerHTML="Hello JavaScript";
+              }
+        </script>
+
+        <script>
+        var x = 10;
+             document.getElementById("bln").innerHTML = Boolean(x);
+             </script>
+
+    
+    </body>
+</html>

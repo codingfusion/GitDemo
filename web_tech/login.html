@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <meta charset="UTF-8">
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <script src="angular.js"></script>
+        
+        
+        <h2>Page to implement Login details</h2>
+        
+        <form>
+            <fieldset>
+            <table>
+            <tr>
+            <td>User Name:</td>
+            <td>
+                <input type="text" name="uname" autofocus ng-model="uname" ng-maxlength="5"/>
+            </td>
+        </tr>
+        <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="text" name="pwd" ng-model="pwd"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Login" ng-click="f1()"/>
+                </td>
+                <td>
+                    <input type="reset" value="Reset"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+        <h3>{{result}} </h3>
+
+
+        <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl",function($scope){
+            $scope.uname = '';
+            $scope.pwd = '';
+            $scope.result = "";
+
+            $scope.f1 = function(){
+               if($scope.uname == 'admin' && $scope.pwd == 'admin')
+                {
+                    $scope.result = 'Welcome';
+                }
+                else
+                {
+                    $scope.result = 'Access Denied..Check your credentials';
+                }
+            };
+        }); 
+    </script> 
+
+
+
+    </body>
+</html>

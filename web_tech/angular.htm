@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		td{
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body ng-app="">
+<!--	<div ng-init="Name=''">
+		<p>Name is: {{Name}}</p>
+		First Name: <input type="text" ng-model="F_Name"><br><br>
+		Last Name: <input type="text" ng-model="L_Name">
+		<h1>Welcome {{F_Name}} {{L_Name}}</h1>
+	</div>
+
+
+
+<table style="border: 1px solid blue;border-collapse: collapse;" ng-init="Fname='';Lname=''">
+	
+	<tr>
+		<td>Ramakant</td>
+		<td>Bhagat</td>
+	</tr>
+
+
+	<tr>
+		<td>Gyanti</td>
+		<td>Devi</td>
+	</tr>8
+	<tr>
+		<td>Govind</td>
+		<td>Bhagat</td>
+	</tr>
+</table>-->
+
+
+
+<div ng-init="cid=30956;cname='Smith';ccity='Hyderabad';email='smith.john@gmail.com';cnumber=6823415629" style="color: blue; background-color: lightyellow;border: 1px solid red;width: 50%;">
+	<p>
+		Customer id:   {{cid}}<br>
+		Customer name: {{cname}}<br>
+		Customer city: {{ccity}}<br>
+		Customer email-id: {{email}}<br>
+		Customer Contact number: {{cnumber}}
+	</p>
+</div>
+
+
+
+<div ng-init="course=['HTML','CSS','AngularJS','BootStrap','Jquery']">
+	<table style="border: 1px solid blue">
+	<ol>
+		<li ng-repeat="item in course">{{item}}</li>
+	</ol>
+	</table>
+</div>
+
+
+<!--<div ng-init="ar=[10,20,30,40,50]">
+	<table style="border: 1px solid blue">
+		<th>Numbers</th>
+		<tr ng-repeat="item in ar">
+			<td>{{item}}</td>
+		</tr>
+	</table>-->
+
+
+	<div ng-init="ar = ['image1.jpg','image2.jpg','image3.jpg']">
+		<table border="2">
+			<tr ng-repeat="item in ar">
+				<td>{{$index+1}}</td>
+				<td>{{item}}</td>
+				<td align="center">
+					<img style="width:100px;height: 80px" src="images/{{item}}"/>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div ng-init="objemp = {ename: 'Adam',eage: 30, eaddr: 'Kolkata'}">
+		<h2>
+			Name:  {{objemp.ename}}<br>
+			Age:  {{objemp.eage}}<br>
+			Address: {{objemp.eaddr}}
+		</h2>
+	</div>
+
+
+
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+<script src="angular.js"></script>
+</body>
+</html>
