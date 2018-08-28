@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json Learning</title>
+</head>
+<body>
+<h1 style="text-align: center;">Json Testing</h1>
+
+
+<h3>Enter a number between 1 - 9 </h3>
+<input id="input" type="text" />&nbsp&nbsp<button onclick="dispusrnum()">Enter</button>
+<p id="usrnmbr"></p>
+
+<button type="button" onclick="rndm()">generate number</button>
+<p id="demo"></p>
+<p id="match"></p>
+
+
+
+
+
+<script>
+	var num;
+    function dispusrnum(){
+	var num = document.getElementById("input").value;
+    document.getElementById("usrnmbr").innerHTML = 'You enterd Numer: ' + num + '<br/>' + 'Now Click below to generate Random Number';
+  }
+
+    function rndm(){
+    var rndm = Math.floor(Math.random() * 10)
+    document.getElementById("demo").innerHTML = rndm;
+   if(num == rndm){
+   	document.getElementById("match").innerHTML = 'Hurray, You guessed it right!!!'
+   }
+   else{
+   	document.getElementById("match").innerHTML =  '<span style="color:red">' + 'Sorry, better next time..' + '</span>';
+   }
+ }
+
+
+	/*var fruits = ["Apple","Banana","Cherry","Fig","Grapes"];
+	function init(){
+    document.getElementById("demo").innerHTML = 'Default list of elements are: ' + '<br/>' + 
+                                            '<span style="font-style:italic;color: orange">' + fruits + '</span>';
+}
+
+function addElements(){
+	var val = document.getElementById("value").value;
+           fruits.push(val);
+           document.getElementById("new").innerHTML = '<span style="color:blue;font-size:18px">' + 'New elements list is: ' + '</span>' + '<br/>' + '<span style="font-size:18px;color:Green;font-style:italic">' + fruits + '</span>';
+}
+
+-------------------------------HTML Code---------------------------------------
+<p>Click below to get default elements</p>
+<button onclick="init()">Click me</button>
+<p id="demo" style="color: blue;font-size: 18px"></p>
+Enter something to add: <input type="text" id="value"/><br/>
+<button onclick="addElements()">Click to add</button>
+<p id="new"></p>
+
+----------------------------------------*******************----------------------------------------
+
+
+
+
+
+
+
+
+/*var trees = ["Banyan","Peepal","Palm","Oak","Sequoia"];
+document.getElementById("demo1").innerHTML = 'Default list of trees is:' + '<br/>' + trees;
+function f1(){
+	trees.push("Pine");
+	document.getElementById("demo").innerHTML = 'After adding trees it becomes: ' + '<br/>' + trees;
+}
+*/
+
+
+/*var fruits = ["Apple","Mango","Grapes","Orange","Banana"];
+var len = fruits.length;
+document.getElementById("demo").innerHTML = 'Fruits are ' + fruits + ' and length is ' + len + '<br/>' + 'and now to display in loops ';
+var txt = '<ul>';
+var i;
+for(i = 0; i < len; i++){
+	txt += '<li>' + fruits[i] + '</li>';
+}
+txt += '</ul>';
+document.getElementById("demo1").innerHTML = txt;
+*/
+
+
+/*var str = "a,b,c,d,e,f,g";
+document.getElementById("demo").innerHTML = str + '<br/>' + typeof(str);
+function f1(){
+	var arr = str.split(" ");
+	document.getElementById("demo1").innerHTML = arr;
+}
+*/
+
+
+/*function getlen(){
+	var txt = document.getElementById("demo").value;
+    document.getElementById("demo1").innerHTML = 'Above text is ' + txt.length + ' characters long';
+    //var slicee = txt.slice(5);
+    //document.getElementById("demo2").innerHTML = txt.slice(7);
+}
+
+---------------- HTML Code from line 16 to 30-----------------
+Enter some text:&nbsp<input type="text" id ="demo"/><br/>
+<button type="button" onclick="getlen()">Get Length</button>
+<p id="demo1" style="color: red; font-size: 25px"></p>
+<p id="demo2"></p>
+-------------------********----------------
+
+*/
+
+	
+
+	/*var person = {
+		
+		"member1": {
+		"firstName": "Ramakant",
+		"lastName": "Bhagat",
+		"age": 50
+	},
+	"member2": {
+		"firstName": "Gyanti",
+		"lastName": "Devi",
+		"age": 48
+	},
+	"member3": {
+		"firstName": "Binod",
+		"lastName": "Bhagat",
+		"age": 33
+	},
+	"member4": {
+		"firstName": "Kanak",
+		"lastName": "Kushwaha",
+		"age": 33
+	},
+	"member5": {
+		"firstName": "Govind",
+		"lastName": "Bhagat",
+		"age": 26,
+		"mood": ["Enraging", "Reticent", "Serious"],
+		"books": [{
+				"Name": "Fault in Our Stars",
+				"Author": "John Green"
+			},
+			{
+				"Name": "The Alchemist",
+				"Author": "Paulo Cohelo"
+			},
+			{
+				"Name": "The Da Vinci Code",
+				"Author": "Dan Brown"
+			}
+		]
+
+	}
+};
+	
+	var myObj = person.member5.books;
+	var op = "";
+	for(var x in myObj){
+	   op += Number(x)+1 + '.' + (myObj[x].Name + ' by ' + myObj[x].Author) + "<br/>";
+	}
+	document.getElementById("output").innerHTML = op;
+	
+    */		
+		
+
+  /*
+
+  var data = {
+  
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "rolf",
+        "last": "hegdal"
+      },
+      "location": {
+        "street": "ljan terrasse 346",
+        "city": "vear",
+        "state": "rogaland",
+        "postcode": "3095",
+        "coordinates": {
+          "latitude": "54.8646",
+          "longitude": "-97.3136"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "email": "rolf.hegdal@example.com",
+      "login": {
+        "uuid": "c4168eac-84b8-46ea-b735-c9da9bfb97fd",
+        "username": "bluefrog786",
+        "password": "ingrid",
+        "salt": "GtRFz4NE",
+        "md5": "5c581c5748fc8c35bd7f16eac9efbb55",
+        "sha1": "c3feb8887abed9ec1561b9aa2c9f58de21d1d3d9",
+        "sha256": "684c478a98b43f1ef1703b35b8bbf61b27dbc93d52acd515e141e97e04447712"
+      },
+      "dob": {
+        "date": "1975-11-12T06:34:44Z",
+        "age": 42
+      },
+      "registered": {
+        "date": "2015-11-04T22:09:36Z",
+        "age": 2
+      },
+      "phone": "66976498",
+      "cell": "40652479",
+      "id": {
+        "name": "FN",
+        "value": "12117533881"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/65.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/65.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/65.jpg"
+      },
+      "nat": "NO"
+    }
+  ],
+  "info": {
+    "seed": "2da87e9305069f1d",
+    "results": 1,
+    "page": 1,
+    "version": "1.2"
+  }
+}
+
+*/
+
+/*	fName: "Govind",
+	lName: "Bhagat",
+	fullName: function(){
+		return this.fName + ' ' + this.lName;
+	}
+};
+
+document.getElementById("demo").innerHTML = person.fullName();
+*/
+
+
+/*function par(){
+	document.getElementById("demo").style.color = 'red';
+}
+  function aar(){
+  	document.getElementById("demo").style.color = 'black';
+
+  }
+
+
+function btn(){
+	document.getElementById("demo").style.fontSize = '35px';
+}
+
+*/
+	
+</script>
+</body>
+</html>
+ 
+
+ 
